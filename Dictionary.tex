@@ -1,1 +1,72 @@
+\documentclass[a4paper,10pt]{article}
 
+%\usepackage[utf8]{inputenc}
+%\usepackage{lipsum}
+%\usepackage{a4}
+%\usepackage[inline,nomargin]{fixme}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+%\usepackage{grffile}
+%\usepackage{url}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+%\usepackage{colortbl}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.1in}
+
+\newcommand{\varopt}[1]{\textsc{#1}}
+
+\title{Glossary of terms}
+\date{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\section{Glossary}
+
+\begin{itemize}
+\item Alphabets
+	\begin{description}
+	\item[$\Sigma$] An \textbf{alphabet} - a finite set of symbols.
+	\item[$\Sigma ^\star$] The set of all \textbf{words} that can be made from $\Sigma$.
+	\item[$\lambda$] The empty \textbf{word}. A word is a finite sequence of symbols over $\Sigma$.
+	\item[$|w|$] The \textbf{length} of a word $w$. Or more generally the size of a set $|w|$.
+	\item[$\Sigma ^n$] \textbf{Words} over $\Sigma$ with a length of exactly $n$.
+	\item[$\Sigma ^+$] \textbf{Words} over $\Sigma$ with a length over 0.
+	\end {description}
+\item Algorithms? General TODO find good seperation of sections
+	\begin{description}
+	\item[$A(x)$] An algorithm $A$ solving the problem instance $x$.
+	\item[$U$] a set of \textbf{problems}.
+	\item[$Pot(S)$] The \textbf{power-set} of a set $S$. A power set of $S$ is the set of all subsets of $S$.
+	\end{description}
+\end{itemize}
+
+\subsection{Decision problems p.97}
+A decision problem is a triple $(L,U,\Sigma). L \subseteq U \subseteq \Sigma ^\star$.
+\begin{description}
+\item[$\Sigma$] The alphabet for the problem.
+\item[$U$] The set of \emph{problems}.
+\item[$L$] The set of \emph{problems} where the algorithm should output \textbf{true}.
+\end{description}
+
+\subsection{Optimization problems p. 102}
+An optimization problem is a 7-tuple $U = (\Sigma _I, \Sigma _O, L, L_I, M, cost, goal)$
+\begin{description}
+\item[$\Sigma _I$] 											The \textbf{input alphabet} for $U$.
+\item[$\Sigma _ O$] 										The \textbf{output alphabet} for $U$.
+\item[$L \subseteq \Sigma_{I}^{\star}$]	The \textbf{language of feasible problem instances} \hfill \\
+																				TODO. What does this mean?
+\item[$L_I \subseteq L$]								The \textbf{language of the (actual) problem instances} \hfill \\
+																				TODO. What does this mean?
+\item[$M$] 															The \textbf{function} mapping $L$ \rightarrow $Pot(\Sigma_{O}^\star)$. \hfill \\
+																				This is essentially our algorithm.
+\item[$cost$]														A \textbf{function} that takes a problem and its solution, and assigns it a cost.
+\item[$goal$]														A \textbf{flag} that says if the problem is a \emph{minimization} problem, or a \emph{maximization} problem.
+\end{description}
+
+\end{document}
