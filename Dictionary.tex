@@ -60,9 +60,10 @@ An optimization problem is a 7-tuple $U = (\Sigma _I, \Sigma _O, L, L_I, M, cost
 \item[$\Sigma _I$] 											The \textbf{input alphabet} for $U$.
 \item[$\Sigma _ O$] 										The \textbf{output alphabet} for $U$.
 \item[$L \subseteq \Sigma_{I}^{\star}$]	The \textbf{language of feasible problem instances} \hfill \\
-																				TODO. What does this mean?
+    All problem instances that has solutions wihch solves the problem, i.e.
+    solutions that satisfies all constraints.
 \item[$L_I \subseteq L$]								The \textbf{language of the (actual) problem instances} \hfill \\
-																				TODO. What does this mean?
+    All problem instances, including those that does not have a solution.
 \item[$M$] 															The \textbf{function} mapping $L \rightarrow Pot(\Sigma_{O}^\star)$. \hfill \\
 																				This is essentially our algorithm.
 \item[$cost$]														A \textbf{function} that takes a problem and its solution, and assigns it a cost.
